@@ -24,9 +24,10 @@ class DataParser {
 
     /**
      * Returns an array of data based on data.
-     * @param array $delimeters
+     * @param $delimiters
      * @param array $keys
      * @throws \Exception
+     * @internal param array $delimeters
      * @return array
      */
     public function toArray($delimiters, $keys) {

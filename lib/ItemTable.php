@@ -34,7 +34,8 @@ class ItemTable
         $items = array();
         $data  = $this
             ->dataReader
-            ->read($this->dataReader->size(false));
+            ->size(true)
+            ->read();
 
         $DataParser = new DataParser($data);
         $array = $DataParser->toArray(array(array("#", 1), array("#", 1)), array("id", "desc"));

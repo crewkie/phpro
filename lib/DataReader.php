@@ -19,11 +19,12 @@ class DataReader
     public function size($setFileSize = false) {
         if ($setFileSize) {
             $this->len = filesize($this->fileName);
+            return $this;
         }
         return filesize($this->fileName);
     }
 
-    public function read($len) {
+    public function read($len = 0) {
         if (isset($this->len)) {
             $len = $this->len;
             $this->len = 0;
